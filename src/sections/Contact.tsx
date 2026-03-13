@@ -25,23 +25,39 @@ function Toast({ onClose }: { onClose: () => void }) {
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
   const [showToast, setShowToast] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Contact from ${form.name}${form.company ? ' – ' + form.company : ''}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nCompany: ${form.company}\n\n${form.message}`
-    );
-    window.location.href = `mailto:viswanatha@viswavardhan.in?subject=${subject}&body=${body}`;
-    setForm({ name: '', email: '', company: '', message: '' });
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 5000);
+    setIsLoading(true);
+
+    const data = new FormData();
+    data.append('access_key', 'eab2622d-2c75-4c88-8dd0-15c197e6aaa2');
+    data.append('name', form.name);
+    data.append('email', form.email);
+    data.append('company', form.company);
+    data.append('message', form.message);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      });
+
+      if (response.ok) {
+        setForm({ name: '', email: '', company: '', message: '' });
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -170,9 +186,10 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full py-3.5 bg-gold text-navy font-sans font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors duration-200"
+                disabled={isLoading}
+                className="w-full py-3.5 bg-gold text-navy font-sans font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

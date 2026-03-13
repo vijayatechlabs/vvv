@@ -54,7 +54,7 @@ function AnimatedStat({ stat }: { stat: Stat }) {
   return (
     <div ref={ref} className="text-center">
       <div className="font-serif text-5xl sm:text-6xl text-gold font-bold mb-3 leading-none tabular-nums">
-        {count.toLocaleString('en-IN')}{stat.suffix}
+        {stat.numeric >= 1000 ? count : count.toLocaleString('en-IN')}{stat.suffix}
       </div>
       <div className="font-sans text-sm text-muted tracking-wide uppercase">
         {stat.label}
