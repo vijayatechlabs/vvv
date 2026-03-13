@@ -108,7 +108,7 @@ export default function CompanyLogo({ name, size = 40 }: CompanyLogoProps) {
         style={{
           width: size,
           height: size,
-          backgroundColor: config.bg,
+          backgroundColor: '#FFFFFF',
           border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
