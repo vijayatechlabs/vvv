@@ -67,16 +67,6 @@ export default function Careers() {
             Stipend: Performance-based after 3 months
           </div>
         </div>
-
-        <a
-          href="https://viswavardhan.in/hiring/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-navy font-sans font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors duration-200"
-        >
-          View All Openings
-          <ArrowUpRight size={16} />
-        </a>
       </div>
     </section>
   );
