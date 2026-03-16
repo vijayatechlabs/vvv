@@ -17,56 +17,63 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'DM Serif Display', Georgia, serif;
   }
 }
 
 @layer utilities {
-  .grid-bg {
-    background-image:
-      linear-gradient(rgba(201, 168, 76, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(201, 168, 76, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+/* Universe Background Theme */
+  .universe-bg {
+    background: radial-gradient(circle at center, #0F204A 0%, #0A1530 60%, #060B1A 100%);
   }
 
-  .gold-border-card {
-    border: 1px solid rgba(201, 168, 76, 0.2);
+  /* Lightweight Stars */
+  .star-base {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #F8F6F1; /* Cream color */
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform, opacity, box-shadow; /* Optimize browser rendering */
   }
 
-  .gold-top-border {
-    border-top: 2px solid #C9A84C;
+  .star-slow {
+    animation: grow-shine 8s ease-in-out infinite alternate;
   }
-
-  .gold-left-border {
-    border-left: 3px solid #C9A84C;
+  .star-med {
+    animation: grow-shine 6s ease-in-out infinite alternate;
+  }
+  .star-fast {
+    animation: grow-shine 4s ease-in-out infinite alternate;
   }
 }
 
-/* Particle float animations */
-@keyframes float-a {
-  0%   { transform: translateY(0px) translateX(0px); opacity: 0.08; }
-  33%  { transform: translateY(-28px) translateX(12px); opacity: 0.12; }
-  66%  { transform: translateY(-14px) translateX(-8px); opacity: 0.06; }
-  100% { transform: translateY(0px) translateX(0px); opacity: 0.08; }
+/* 
+ * Star Animation: Growth and Glow
+ * Starts very small and dim, grows and glows brighter, simulating the
+ * "incubator/growing company" theme in the vast universe.
+ */
+@keyframes grow-shine {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.1;
+    box-shadow: 0 0 0px 0px rgba(201, 168, 76, 0);
+  }
+  30% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+    box-shadow: 0 0 12px 2px rgba(201, 168, 76, 0.4); /* Gold glow */
+  }
 }
-
-@keyframes float-b {
-  0%   { transform: translateY(0px) translateX(0px); opacity: 0.06; }
-  40%  { transform: translateY(20px) translateX(-16px); opacity: 0.1; }
-  80%  { transform: translateY(-10px) translateX(10px); opacity: 0.05; }
-  100% { transform: translateY(0px) translateX(0px); opacity: 0.06; }
-}
-
-@keyframes float-c {
-  0%   { transform: translateY(0px) translateX(0px); opacity: 0.09; }
-  50%  { transform: translateY(-22px) translateX(18px); opacity: 0.05; }
-  100% { transform: translateY(0px) translateX(0px); opacity: 0.09; }
-}
-
-.particle-a { animation: float-a var(--dur, 14s) ease-in-out infinite; }
-.particle-b { animation: float-b var(--dur, 18s) ease-in-out infinite; }
-.particle-c { animation: float-c var(--dur, 22s) ease-in-out infinite; }
 
 /* Company card hover effects */
 .company-card {
