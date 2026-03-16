@@ -1,28 +1,26 @@
 import { Shield } from 'lucide-react';
 
-const PARTICLES: Array<{
+const STARS: Array<{
   top: string; left: string; size: number;
-  cls: string; dur: string; delay: string;
+  cls: string; delay: string;
 }> = [
-    { top: '8%', left: '7%', size: 3, cls: 'particle-a', dur: '16s', delay: '0s' },
-    { top: '15%', left: '23%', size: 2, cls: 'particle-b', dur: '20s', delay: '2s' },
-    { top: '22%', left: '82%', size: 4, cls: 'particle-c', dur: '24s', delay: '1s' },
-    { top: '35%', left: '91%', size: 2, cls: 'particle-a', dur: '18s', delay: '4s' },
-    { top: '48%', left: '5%', size: 3, cls: 'particle-b', dur: '22s', delay: '3s' },
-    { top: '55%', left: '68%', size: 2, cls: 'particle-c', dur: '15s', delay: '5s' },
-    { top: '65%', left: '40%', size: 4, cls: 'particle-a', dur: '19s', delay: '1.5s' },
-    { top: '72%', left: '14%', size: 2, cls: 'particle-b', dur: '25s', delay: '6s' },
-    { top: '78%', left: '78%', size: 3, cls: 'particle-c', dur: '17s', delay: '0.5s' },
-    { top: '85%', left: '55%', size: 2, cls: 'particle-a', dur: '21s', delay: '3.5s' },
-    { top: '12%', left: '52%', size: 3, cls: 'particle-b', dur: '23s', delay: '7s' },
-    { top: '42%', left: '35%', size: 2, cls: 'particle-c', dur: '16s', delay: '2.5s' },
-    { top: '90%', left: '30%', size: 3, cls: 'particle-a', dur: '20s', delay: '4.5s' },
-    { top: '60%', left: '95%', size: 2, cls: 'particle-b', dur: '14s', delay: '1s' },
-    { top: '28%', left: '62%', size: 4, cls: 'particle-c', dur: '26s', delay: '8s' },
-    { top: '5%', left: '45%', size: 2, cls: 'particle-a', dur: '18s', delay: '6.5s' },
-    { top: '95%', left: '72%', size: 3, cls: 'particle-b', dur: '22s', delay: '3s' },
-    { top: '50%', left: '50%', size: 2, cls: 'particle-c', dur: '20s', delay: '9s' },
-  ];
+  // A mix of slow, medium, and fast growing stars scattered across the universe
+  { top: '15%', left: '10%', size: 3, cls: 'star-slow', delay: '0s' },
+  { top: '8%',  left: '45%', size: 2, cls: 'star-med',  delay: '2s' },
+  { top: '25%', left: '80%', size: 4, cls: 'star-fast', delay: '1s' },
+  { top: '40%', left: '15%', size: 2, cls: 'star-med',  delay: '4s' },
+  { top: '55%', left: '8%',  size: 3, cls: 'star-slow', delay: '3s' },
+  { top: '35%', left: '60%', size: 2, cls: 'star-fast', delay: '5s' },
+  { top: '65%', left: '30%', size: 4, cls: 'star-slow', delay: '1.5s' },
+  { top: '80%', left: '15%', size: 2, cls: 'star-med',  delay: '6s' },
+  { top: '75%', left: '85%', size: 3, cls: 'star-fast', delay: '0.5s' },
+  { top: '85%', left: '65%', size: 2, cls: 'star-med',  delay: '3.5s' },
+  { top: '12%', left: '75%', size: 3, cls: 'star-slow', delay: '7s' },
+  { top: '45%', left: '88%', size: 2, cls: 'star-fast', delay: '2.5s' },
+  { top: '90%', left: '40%', size: 3, cls: 'star-slow', delay: '4.5s' },
+  { top: '50%', left: '95%', size: 2, cls: 'star-med',  delay: '1s' },
+  { top: '28%', left: '35%', size: 4, cls: 'star-fast', delay: '8s' },
+];
 
 function AshokaChakra() {
   const spokes = Array.from({ length: 24 }, (_, i) => {
@@ -58,6 +56,7 @@ function AshokaChakra() {
   );
 }
 
+
 export default function Hero() {
   const scrollToCompanies = () => {
     const el = document.getElementById('companies');
@@ -65,25 +64,26 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1B3E] via-[#0D1B3E]/90 to-[#0D1B3E]" />
-
+    <section className="relative min-h-screen flex items-center justify-center universe-bg overflow-hidden">
+      {/* The Stars */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        {PARTICLES.map((p, i) => (
+        {STARS.map((star, i) => (
           <span
             key={i}
-            className={`absolute rounded-full bg-[#C9A84C] ${p.cls}`}
+            className={`star-base ${star.cls}`}
             style={{
-              top: p.top,
-              left: p.left,
-              width: p.size,
-              height: p.size,
-              ['--dur' as string]: p.dur,
-              animationDelay: p.delay,
+              top: star.top,
+              left: star.left,
+              width: star.size,
+              height: star.size,
+              animationDelay: star.delay,
             }}
           />
         ))}
       </div>
+      
+      {/* Core Background Gradient Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060B1A]/40 to-[#0A1530]" pointer-events-none aria-hidden="true" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)]">
