@@ -4,25 +4,25 @@ const PARTICLES: Array<{
   top: string; left: string; size: number;
   cls: string; dur: string; delay: string;
 }> = [
-  { top: '8%',  left: '7%',  size: 3, cls: 'particle-a', dur: '16s', delay: '0s' },
-  { top: '15%', left: '23%', size: 2, cls: 'particle-b', dur: '20s', delay: '2s' },
-  { top: '22%', left: '82%', size: 4, cls: 'particle-c', dur: '24s', delay: '1s' },
-  { top: '35%', left: '91%', size: 2, cls: 'particle-a', dur: '18s', delay: '4s' },
-  { top: '48%', left: '5%',  size: 3, cls: 'particle-b', dur: '22s', delay: '3s' },
-  { top: '55%', left: '68%', size: 2, cls: 'particle-c', dur: '15s', delay: '5s' },
-  { top: '65%', left: '40%', size: 4, cls: 'particle-a', dur: '19s', delay: '1.5s' },
-  { top: '72%', left: '14%', size: 2, cls: 'particle-b', dur: '25s', delay: '6s' },
-  { top: '78%', left: '78%', size: 3, cls: 'particle-c', dur: '17s', delay: '0.5s' },
-  { top: '85%', left: '55%', size: 2, cls: 'particle-a', dur: '21s', delay: '3.5s' },
-  { top: '12%', left: '52%', size: 3, cls: 'particle-b', dur: '23s', delay: '7s' },
-  { top: '42%', left: '35%', size: 2, cls: 'particle-c', dur: '16s', delay: '2.5s' },
-  { top: '90%', left: '30%', size: 3, cls: 'particle-a', dur: '20s', delay: '4.5s' },
-  { top: '60%', left: '95%', size: 2, cls: 'particle-b', dur: '14s', delay: '1s' },
-  { top: '28%', left: '62%', size: 4, cls: 'particle-c', dur: '26s', delay: '8s' },
-  { top: '5%',  left: '45%', size: 2, cls: 'particle-a', dur: '18s', delay: '6.5s' },
-  { top: '95%', left: '72%', size: 3, cls: 'particle-b', dur: '22s', delay: '3s' },
-  { top: '50%', left: '50%', size: 2, cls: 'particle-c', dur: '20s', delay: '9s' },
-];
+    { top: '8%', left: '7%', size: 3, cls: 'particle-a', dur: '16s', delay: '0s' },
+    { top: '15%', left: '23%', size: 2, cls: 'particle-b', dur: '20s', delay: '2s' },
+    { top: '22%', left: '82%', size: 4, cls: 'particle-c', dur: '24s', delay: '1s' },
+    { top: '35%', left: '91%', size: 2, cls: 'particle-a', dur: '18s', delay: '4s' },
+    { top: '48%', left: '5%', size: 3, cls: 'particle-b', dur: '22s', delay: '3s' },
+    { top: '55%', left: '68%', size: 2, cls: 'particle-c', dur: '15s', delay: '5s' },
+    { top: '65%', left: '40%', size: 4, cls: 'particle-a', dur: '19s', delay: '1.5s' },
+    { top: '72%', left: '14%', size: 2, cls: 'particle-b', dur: '25s', delay: '6s' },
+    { top: '78%', left: '78%', size: 3, cls: 'particle-c', dur: '17s', delay: '0.5s' },
+    { top: '85%', left: '55%', size: 2, cls: 'particle-a', dur: '21s', delay: '3.5s' },
+    { top: '12%', left: '52%', size: 3, cls: 'particle-b', dur: '23s', delay: '7s' },
+    { top: '42%', left: '35%', size: 2, cls: 'particle-c', dur: '16s', delay: '2.5s' },
+    { top: '90%', left: '30%', size: 3, cls: 'particle-a', dur: '20s', delay: '4.5s' },
+    { top: '60%', left: '95%', size: 2, cls: 'particle-b', dur: '14s', delay: '1s' },
+    { top: '28%', left: '62%', size: 4, cls: 'particle-c', dur: '26s', delay: '8s' },
+    { top: '5%', left: '45%', size: 2, cls: 'particle-a', dur: '18s', delay: '6.5s' },
+    { top: '95%', left: '72%', size: 3, cls: 'particle-b', dur: '22s', delay: '3s' },
+    { top: '50%', left: '50%', size: 2, cls: 'particle-c', dur: '20s', delay: '9s' },
+  ];
 
 function AshokaChakra() {
   const spokes = Array.from({ length: 24 }, (_, i) => {
@@ -136,7 +136,7 @@ export default function Hero() {
           onClick={scrollToCompanies}
           className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-navy font-sans font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors duration-200 shadow-lg shadow-[rgba(201,168,76,0.2)]"
         >
-          Explore Our Companies
+          Explore Our Brands
           <span className="text-base">&darr;</span>
         </button>
       </div>

@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Our Companies', href: '/#companies' },
   { label: 'About', href: '/#about' },
+  { label: 'Brands', href: '/#companies' },
   { label: 'Careers', href: '/#careers' },
   { label: 'Contact', href: '/#contact' },
 ];
@@ -56,11 +56,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-[#0D1B3E]/95 backdrop-blur-md border-b border-[rgba(201,168,76,0.15)] shadow-lg'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 flex-shrink-0">
@@ -80,9 +79,8 @@ export default function Navbar() {
               <Link
                 to={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`nav-link-underline font-sans text-sm transition-colors duration-200 ${
-                  isActive(link.href) ? 'text-cream active' : 'text-muted hover:text-cream'
-                }`}
+                className={`nav-link-underline font-sans text-sm transition-colors duration-200 ${isActive(link.href) ? 'text-cream active' : 'text-muted hover:text-cream'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -107,9 +105,8 @@ export default function Navbar() {
                 <Link
                   to={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`font-sans text-sm transition-colors duration-200 block py-1 ${
-                    isActive(link.href) ? 'text-gold' : 'text-muted hover:text-cream'
-                  }`}
+                  className={`font-sans text-sm transition-colors duration-200 block py-1 ${isActive(link.href) ? 'text-gold' : 'text-muted hover:text-cream'
+                    }`}
                 >
                   {link.label}
                 </Link>
