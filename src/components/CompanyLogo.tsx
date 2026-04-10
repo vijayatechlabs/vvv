@@ -81,6 +81,14 @@ const logoMap: Record<string, LogoConfig> = {
     font: 'sans',
     contain: true,
   },
+  'MemPalace': {
+    image: '/mempalace-logo.png',
+    initials: 'MP',
+    bg: '#0F0F0F',
+    text: '#2DD4BF',
+    font: 'serif',
+    contain: true,
+  },
 };
 
 const fontClass: Record<string, string> = {
