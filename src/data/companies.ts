@@ -88,4 +88,15 @@ export const sectors: Sector[] = [
       },
     ],
   },
+  {
+    label: 'Research Portfolio',
+    companies: [
+      {
+        name: 'MemPalace',
+        domain: 'mempalace.in',
+        tagline: 'Open-source, local AI memory system with 96.6% recall. Zero cloud, zero API costs.',
+        status: 'Live',
+      },
+    ],
+  },
 ];
