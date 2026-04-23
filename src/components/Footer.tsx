@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const brandsByGroup = [
   {
@@ -52,20 +52,6 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
-              </a>
-              <a
-                href="#"
-                className="text-muted hover:text-gold transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a
-                href="#"
-                className="text-muted hover:text-gold transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={18} />
               </a>
             </div>
           </div>

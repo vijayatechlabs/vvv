@@ -64,7 +64,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center universe-bg overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center universe-bg premium-grain overflow-hidden">
       {/* The Stars */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {STARS.map((star, i) => (
@@ -139,6 +139,21 @@ export default function Hero() {
           Explore Our Brands
           <span className="text-base">&darr;</span>
         </button>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+          {[
+            '10 active brands across 4 sectors',
+            'DPIIT Recognised • Valid through April 19, 2031',
+            'Built in India, serving global clients',
+          ].map((proof) => (
+            <div
+              key={proof}
+              className="rounded-lg border border-[rgba(201,168,76,0.18)] bg-[rgba(18,35,72,0.55)] px-4 py-3 text-xs tracking-wide text-cream/85 backdrop-blur-sm"
+            >
+              {proof}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">

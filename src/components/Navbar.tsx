@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'About', href: '/#about' },
-  { label: 'Brands', href: '/#companies' },
-  { label: 'Research', href: '/#companies' },
+  { label: 'Portfolio', href: '/#companies' },
+  { label: 'Research', href: '/#numbers' },
   { label: 'Careers', href: '/#careers' },
   { label: 'Contact', href: '/#contact' },
 ];
@@ -25,7 +25,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!isHome) return;
-    const sections = ['companies', 'about', 'careers', 'contact'];
+    const sections = ['companies', 'numbers', 'about', 'careers', 'contact'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -88,6 +88,14 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        <a
+          href="/#contact"
+          onClick={() => handleNavClick('/#contact')}
+          className="hidden md:inline-flex items-center px-4 py-2 rounded-lg border border-[rgba(201,168,76,0.35)] text-gold font-sans text-xs font-semibold tracking-wide uppercase hover:border-[rgba(201,168,76,0.6)] hover:bg-[rgba(201,168,76,0.08)] transition-colors"
+        >
+          Partner With Us
+        </a>
 
         <button
           className="md:hidden text-cream p-1"
