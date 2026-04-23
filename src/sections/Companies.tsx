@@ -38,7 +38,7 @@ export default function Companies() {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-20">
           {sectors.map((sector) => (
             <div key={sector.label}>
               <div className="flex items-center gap-4 mb-8">
@@ -50,9 +50,9 @@ export default function Companies() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {sector.companies.map((company) => (
-                  <div
+                  <article
                     key={company.name}
-                    className="company-card gold-top-border bg-[#122348] border border-[rgba(201,168,76,0.15)] rounded-lg p-6 flex flex-col"
+                    className="company-card gold-top-border bg-[linear-gradient(180deg,rgba(18,35,72,0.95),rgba(12,24,52,0.95))] border border-[rgba(201,168,76,0.15)] rounded-xl p-6 flex flex-col shadow-[0_12px_32px_rgba(3,8,22,0.35)]"
                   >
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
@@ -66,8 +66,11 @@ export default function Companies() {
                           </p>
                         </div>
                       </div>
-                      <p className="font-sans text-sm text-muted leading-relaxed mb-4">
+                      <p className="font-sans text-sm text-muted leading-relaxed mb-5">
                         {company.tagline}
+                      </p>
+                      <p className="font-sans text-[11px] text-cream/55 uppercase tracking-[0.16em]">
+                        Operating Company
                       </p>
                     </div>
 
@@ -85,7 +88,7 @@ export default function Companies() {
                         </a>
                       ) : null}
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
