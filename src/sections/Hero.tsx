@@ -157,6 +157,19 @@ export default function Hero() {
               </div>
             ))}
           </div>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+          {[
+            '10 active brands across 4 sectors',
+            'DPIIT Recognised • Valid through April 19, 2031',
+            'Built in India, serving global clients',
+          ].map((proof) => (
+            <div
+              key={proof}
+              className="rounded-lg border border-[rgba(201,168,76,0.18)] bg-[rgba(18,35,72,0.55)] px-4 py-3 text-xs tracking-wide text-cream/85 backdrop-blur-sm"
+            >
+              {proof}
+            </div>
+          ))}
         </div>
       </div>
 
