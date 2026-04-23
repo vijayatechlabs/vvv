@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Linkedin, Twitter, Youtube, CheckCircle, X } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin, CheckCircle, X } from 'lucide-react';
 
 function Toast({ onClose }: { onClose: () => void }) {
   return (
@@ -23,6 +23,7 @@ function Toast({ onClose }: { onClose: () => void }) {
 }
 
 export default function Contact() {
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
   const [showToast, setShowToast] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -33,10 +34,14 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!accessKey) {
+      console.error('Missing VITE_WEB3FORMS_ACCESS_KEY');
+      return;
+    }
     setIsLoading(true);
 
     const data = new FormData();
-    data.append('access_key', 'eab2622d-2c75-4c88-8dd0-15c197e6aaa2');
+    data.append('access_key', accessKey);
     data.append('name', form.name);
     data.append('email', form.email);
     data.append('company', form.company);
@@ -123,12 +128,6 @@ export default function Contact() {
                 >
                   <Linkedin size={16} />
                 </a>
-                <a href="#" className="w-9 h-9 rounded-lg bg-[#122348] border border-[rgba(201,168,76,0.2)] flex items-center justify-center text-muted hover:text-gold hover:border-[rgba(201,168,76,0.5)] transition-colors" aria-label="Twitter">
-                  <Twitter size={16} />
-                </a>
-                <a href="#" className="w-9 h-9 rounded-lg bg-[#122348] border border-[rgba(201,168,76,0.2)] flex items-center justify-center text-muted hover:text-gold hover:border-[rgba(201,168,76,0.5)] transition-colors" aria-label="YouTube">
-                  <Youtube size={16} />
-                </a>
               </div>
             </div>
           </div>
@@ -191,6 +190,9 @@ export default function Contact() {
               >
                 {isLoading ? 'Sending...' : 'Send Message'}
               </button>
+              <p className="font-sans text-[11px] text-muted/80 leading-relaxed">
+                We usually respond within 1 business day. Your information is used only to respond to your enquiry.
+              </p>
             </form>
           </div>
         </div>
