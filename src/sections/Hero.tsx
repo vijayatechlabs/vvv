@@ -71,26 +71,26 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
-        <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)]">
-          <span className="text-gold text-xs font-sans font-medium tracking-wider uppercase">
-            India-born Company Builder &middot; Est. 2021
+        <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)] shadow-[0_0_15px_rgba(201,168,76,0.1)]">
+          <span className="text-gold text-xs font-sans font-medium tracking-[0.2em] uppercase">
+            Pioneering Indian Ventures &middot; Est. 2021
           </span>
         </div>
 
         <h1
-          className="font-serif text-[40px] sm:text-[52px] lg:text-[64px] leading-[1.1] text-cream mb-6"
+          className="font-serif text-[44px] sm:text-[56px] lg:text-[72px] leading-[1.05] text-cream mb-8"
           style={{
-            background: 'linear-gradient(135deg, #F8F6F1 60%, #C9A84C 100%)',
+            background: 'linear-gradient(to bottom, #F8F6F1 30%, #D4AF37 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
           }}
         >
-          Building India's Next Generation of Companies
+          Architecting the Future of <br className="hidden sm:block" /> Indian Enterprise
         </h1>
 
-        <p className="font-sans text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-          We incubate bold brands across AI, Fintech, Real Estate, and Commerce — from India, for the world.
+        <p className="font-sans text-lg sm:text-xl text-muted max-w-3xl mx-auto mb-12 leading-relaxed opacity-90">
+          We partner with visionary founders to architect, launch, and scale category-defining brands across AI, Fintech, and Commerce—built in India, engineered for the global stage.
         </p>
 
         <div className="mb-12 flex items-center justify-center">
@@ -119,31 +119,32 @@ export default function Hero() {
           <span className="text-base">&darr;</span>
         </button>
 
-        <div className="mt-12 max-w-4xl mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.24em] text-gold/90 mb-4">
-            We have worked with
+        <div className="mt-24 pt-12 border-t border-[rgba(201,168,76,0.1)]">
+          <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold/60 mb-10 font-medium">
+            Systems Built For
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-60 hover:opacity-100 transition-opacity duration-500">
             {[
-              { name: 'Pabbly Connect', detail: 'Affiliate Partner' },
-              { name: 'Swooopos', detail: 'AI Automation' },
-              { name: 'WaiterMate', detail: 'AI Automation' },
-              { name: 'NeedyLoans.com.au' },
-              { name: 'AiportEV.ng' },
-              { name: 'ZuidEnergies.com' },
-              { name: 'BuyMyCar.in' },
-            ].map((client) => (
+              { name: 'Swooo', bold: 'pos' },
+              { name: 'Zuid', bold: 'Energies' },
+              { name: 'Needy', bold: 'Loans' },
+              { name: 'Airport', bold: 'EV' },
+              { name: 'Waiter', bold: 'Mate' },
+              { name: 'BuyMy', bold: 'Car' },
+              { name: 'Pabbly', bold: 'Connect' },
+            ].map((brand) => (
               <div
-                key={client.name}
-                className="rounded-lg border border-[rgba(201,168,76,0.18)] bg-[rgba(18,35,72,0.55)] px-4 py-3 text-left backdrop-blur-sm"
+                key={brand.name + brand.bold}
+                className="group cursor-default select-none transition-all duration-300 hover:scale-105"
               >
-                <p className="font-sans text-sm text-cream/90 leading-snug">{client.name}</p>
-                {client.detail ? (
-                  <p className="font-sans text-[11px] text-gold/80 mt-1 tracking-wide uppercase">{client.detail}</p>
-                ) : null}
+                <span className="font-sans text-lg sm:text-xl text-cream/70 tracking-tight group-hover:text-gold transition-colors duration-300">
+                  <span className="font-light">{brand.name}</span>
+                  <span className="font-bold">{brand.bold}</span>
+                </span>
               </div>
             ))}
           </div>
+        </div>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
           {[
             '10 active brands across 4 sectors',
@@ -159,7 +160,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-    </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
