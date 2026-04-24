@@ -32,8 +32,8 @@ export default function Footer() {
       <div className="absolute inset-0 premium-grain opacity-20" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-          <div className="md:col-span-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
+          <div className="lg:col-span-4 flex flex-col items-start">
             <div className="flex items-center gap-4 mb-6">
               <img
                 src="/VVV-logo.png"
@@ -44,7 +44,7 @@ export default function Footer() {
                 ViswaVardhan Vyapara
               </span>
             </div>
-            <p className="font-sans text-muted text-sm leading-relaxed mb-8 max-w-xs">
+            <p className="font-sans text-muted text-sm leading-relaxed mb-8 max-w-xs text-left">
               Building India's Next Generation of Companies with deep-tech, fintech, and commerce expertise.
             </p>
             <div className="flex items-center gap-4">
@@ -60,34 +60,33 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-1 hidden md:block" />
-
-          {brandsByGroup.map((group, idx) => (
-            <div key={group.label} className={`md:col-span-${idx === 0 ? '3' : '4'}`}>
-              <h4 className="font-sans text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8">
-                {group.label}
-              </h4>
-              <ul className="space-y-4">
-                {group.brands.map((brand) => (
-                  <li key={brand.name}>
-                    {brand.url ? (
-                      <a
-                        href={brand.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-sans text-sm text-muted/80 hover:text-cream transition-colors flex items-center group"
-                      >
-                        <span className="w-0 h-px bg-gold/50 mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300" />
-                        {brand.name}
-                      </a>
-                    ) : (
-                      <span className="font-sans text-sm text-muted/40 italic">{brand.name}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-12">
+            {brandsByGroup.map((group) => (
+              <div key={group.label} className="flex flex-col items-start">
+                <h4 className="font-sans text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8 text-left">
+                  {group.label}
+                </h4>
+                <ul className="space-y-4 text-left w-full">
+                  {group.brands.map((brand) => (
+                    <li key={brand.name}>
+                      {brand.url ? (
+                        <a
+                          href={brand.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-sans text-sm text-muted/80 hover:text-cream transition-colors block hover:translate-x-1 duration-300"
+                        >
+                          {brand.name}
+                        </a>
+                      ) : (
+                        <span className="font-sans text-sm text-muted/40 italic block">{brand.name}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-20 pt-10 border-t border-[rgba(201,168,76,0.15)]">
