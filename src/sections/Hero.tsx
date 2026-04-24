@@ -19,28 +19,6 @@ const STARS: Array<{
     { top: '28%', left: '35%', size: 4, cls: 'star-fast', delay: '8s' },
   ];
 
-function AshokaChakra() {
-  const spokes = Array.from({ length: 24 }, (_, i) => {
-    const angle = (i * 360) / 24;
-    const rad = (angle * Math.PI) / 180;
-    const x1 = 8 + 5 * Math.cos(rad);
-    const y1 = 8 + 5 * Math.sin(rad);
-    const x2 = 8 + 7.5 * Math.cos(rad);
-    const y2 = 8 + 7.5 * Math.sin(rad);
-    return { x1, y1, x2, y2, key: i };
-  });
-
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="8" cy="8" r="7" stroke="#C9A84C" strokeWidth="0.75" fill="none" />
-      <circle cx="8" cy="8" r="1.2" fill="#C9A84C" />
-      {spokes.map(({ x1, y1, x2, y2, key }) => (
-        <line key={key} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#C9A84C" strokeWidth="0.6" />
-      ))}
-    </svg>
-  );
-}
-
 export default function Hero() {
   const scrollToCompanies = () => {
     const el = document.getElementById('companies');
@@ -93,37 +71,19 @@ export default function Hero() {
           We partner with visionary founders to architect, launch, and scale category-defining brands across AI, Fintech, and Commerce—built in India, engineered for the global stage.
         </p>
 
-        <div className="mb-12 flex items-center justify-center">
-          <a
-            href="/VVV-StartUp-India-certificate.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-2.5 px-4 py-2.5 bg-[#122348] border border-[rgba(201,168,76,0.3)] rounded-lg hover:border-[rgba(201,168,76,0.6)] transition-colors duration-200"
-            title="View Recognition Certificate"
-          >
-            <AshokaChakra />
-            <span className="font-sans text-xs text-cream/80 tracking-wide">
-              View Startup Recognition Certificate
-            </span>
-            <span className="font-sans text-[10px] text-gold/50 group-hover:text-gold transition-colors">
-              &rarr;
-            </span>
-          </a>
-        </div>
-
         <button
           onClick={scrollToCompanies}
-          className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-navy font-sans font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors duration-200 shadow-lg shadow-[rgba(201,168,76,0.2)]"
+          className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-navy font-sans font-semibold text-sm rounded-lg hover:bg-gold-light transition-colors duration-200 shadow-lg shadow-[rgba(201,168,76,0.2)] mb-20"
         >
           Explore Our Brands
           <span className="text-base">&darr;</span>
         </button>
 
-        <div className="mt-24 pt-12 border-t border-[rgba(201,168,76,0.1)]">
+        <div className="pt-12 border-t border-[rgba(201,168,76,0.1)]">
           <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold/60 mb-10 font-medium">
             We have worked with
           </p>
-          <div className="flex flex-nowrap justify-between items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-500 overflow-x-auto pb-4 sm:pb-0 hide-scrollbar">
+          <div className="flex flex-nowrap justify-between items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-500 overflow-x-auto pb-4 sm:pb-0 hide-scrollbar mb-12">
             {[
               { name: 'Swoo', bold: 'POS' },
               { name: 'Zuid', bold: 'Energies' },
@@ -144,20 +104,14 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
-          {[
-            '10 active brands across 4 sectors',
-            'DPIIT Recognised • Valid through April 19, 2031',
-            'Built in India, serving global clients',
-          ].map((proof) => (
-            <div
-              key={proof}
-              className="rounded-lg border border-[rgba(201,168,76,0.18)] bg-[rgba(18,35,72,0.55)] px-4 py-3 text-xs tracking-wide text-cream/85 backdrop-blur-sm"
-            >
-              {proof}
-            </div>
-          ))}
+
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-[11px] tracking-[0.1em] text-cream/40 font-sans uppercase">
+            <span>10 active brands across 4 sectors</span>
+            <span className="hidden sm:block w-1 h-1 rounded-full bg-gold/20" />
+            <span>DPIIT Recognised Venture Studio</span>
+            <span className="hidden sm:block w-1 h-1 rounded-full bg-gold/20" />
+            <span>Built in India &middot; Global Reach</span>
+          </div>
         </div>
       </div>
 
@@ -168,4 +122,3 @@ export default function Hero() {
     </section>
   );
 }
-
