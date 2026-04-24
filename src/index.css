@@ -63,6 +63,15 @@
   .star-fast {
     animation: grow-shine 4s ease-in-out infinite alternate;
   }
+
+  /* Hide scrollbar utility */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 /* 
