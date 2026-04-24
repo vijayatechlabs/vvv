@@ -33,6 +33,17 @@
     background: radial-gradient(circle at center, #0F204A 0%, #0A1530 60%, #060B1A 100%);
   }
 
+  .premium-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(248, 246, 241, 0.05) 0.6px, transparent 0.6px);
+    background-size: 2px 2px;
+    opacity: 0.14;
+    mix-blend-mode: soft-light;
+  }
+
   /* Lightweight Stars */
   .star-base {
     position: absolute;

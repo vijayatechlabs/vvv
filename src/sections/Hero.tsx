@@ -1,5 +1,3 @@
-import { Shield } from 'lucide-react';
-
 const STARS: Array<{
   top: string; left: string; size: number;
   cls: string; delay: string;
@@ -50,8 +48,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center universe-bg overflow-hidden">
-      {/* Background Stars */}
+    <section className="relative min-h-screen flex items-center justify-center universe-bg premium-grain overflow-hidden">
+      {/* The Stars */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {STARS.map((star, i) => (
           <span
@@ -75,7 +73,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)]">
           <span className="text-gold text-xs font-sans font-medium tracking-wider uppercase">
-            DPIIT Recognised Startup &middot; Est. 2021
+            India-born Company Builder &middot; Est. 2021
           </span>
         </div>
 
@@ -92,31 +90,25 @@ export default function Hero() {
         </h1>
 
         <p className="font-sans text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-          A DPIIT-recognised startup incubating bold brands across AI, Fintech, Real Estate, and Commerce — from India, for the world.
+          We incubate bold brands across AI, Fintech, Real Estate, and Commerce — from India, for the world.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <div className="mb-12 flex items-center justify-center">
           <a
             href="/VVV-StartUp-India-certificate.jpg"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2.5 px-4 py-2.5 bg-[#122348] border border-[rgba(201,168,76,0.3)] rounded-lg hover:border-[rgba(201,168,76,0.6)] transition-colors duration-200"
-            title="View DPIIT Certificate of Recognition"
+            title="View Recognition Certificate"
           >
             <AshokaChakra />
             <span className="font-sans text-xs text-cream/80 tracking-wide">
-              DPIIT Recognised Startup India &middot; DIPP210560
+              View Startup Recognition Certificate
             </span>
             <span className="font-sans text-[10px] text-gold/50 group-hover:text-gold transition-colors">
               &rarr;
             </span>
           </a>
-          <div className="flex items-center gap-2 px-4 py-2.5 bg-[#122348] border border-[rgba(201,168,76,0.2)] rounded-lg">
-            <Shield size={14} className="text-gold flex-shrink-0" />
-            <span className="font-sans text-xs text-cream/80 tracking-wide">
-              OPC Pvt Ltd &middot; CIN: U72900AP2021OPC118054
-            </span>
-          </div>
         </div>
 
         <button
@@ -126,6 +118,46 @@ export default function Hero() {
           Explore Our Brands
           <span className="text-base">&darr;</span>
         </button>
+
+        <div className="mt-12 max-w-4xl mx-auto">
+          <p className="font-sans text-[11px] uppercase tracking-[0.24em] text-gold/90 mb-4">
+            We have worked with
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { name: 'Pabbly Connect', detail: 'Affiliate Partner' },
+              { name: 'Swooopos', detail: 'AI Automation' },
+              { name: 'WaiterMate', detail: 'AI Automation' },
+              { name: 'NeedyLoans.com.au' },
+              { name: 'AiportEV.ng' },
+              { name: 'ZuidEnergies.com' },
+              { name: 'BuyMyCar.in' },
+            ].map((client) => (
+              <div
+                key={client.name}
+                className="rounded-lg border border-[rgba(201,168,76,0.18)] bg-[rgba(18,35,72,0.55)] px-4 py-3 text-left backdrop-blur-sm"
+              >
+                <p className="font-sans text-sm text-cream/90 leading-snug">{client.name}</p>
+                {client.detail ? (
+                  <p className="font-sans text-[11px] text-gold/80 mt-1 tracking-wide uppercase">{client.detail}</p>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+          {[
+            '10 active brands across 4 sectors',
+            'DPIIT Recognised • Valid through April 19, 2031',
+            'Built in India, serving global clients',
+          ].map((proof) => (
+            <div
+              key={proof}
+              className="rounded-lg border border-[rgba(201,168,76,0.18)] bg-[rgba(18,35,72,0.55)] px-4 py-3 text-xs tracking-wide text-cream/85 backdrop-blur-sm"
+            >
+              {proof}
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Scroll Indicator */}
