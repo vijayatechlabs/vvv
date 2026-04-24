@@ -159,6 +159,7 @@ export default function Hero() {
           ))}
         </div>
       </div>
+    </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
