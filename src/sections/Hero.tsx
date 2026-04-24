@@ -2,22 +2,22 @@ const STARS: Array<{
   top: string; left: string; size: number;
   cls: string; delay: string;
 }> = [
-  { top: '15%', left: '10%', size: 3, cls: 'star-slow', delay: '0s' },
-  { top: '8%',  left: '45%', size: 2, cls: 'star-med',  delay: '2s' },
-  { top: '25%', left: '80%', size: 4, cls: 'star-fast', delay: '1s' },
-  { top: '40%', left: '15%', size: 2, cls: 'star-med',  delay: '4s' },
-  { top: '55%', left: '8%',  size: 3, cls: 'star-slow', delay: '3s' },
-  { top: '35%', left: '60%', size: 2, cls: 'star-fast', delay: '5s' },
-  { top: '65%', left: '30%', size: 4, cls: 'star-slow', delay: '1.5s' },
-  { top: '80%', left: '15%', size: 2, cls: 'star-med',  delay: '6s' },
-  { top: '75%', left: '85%', size: 3, cls: 'star-fast', delay: '0.5s' },
-  { top: '85%', left: '65%', size: 2, cls: 'star-med',  delay: '3.5s' },
-  { top: '12%', left: '75%', size: 3, cls: 'star-slow', delay: '7s' },
-  { top: '45%', left: '88%', size: 2, cls: 'star-fast', delay: '2.5s' },
-  { top: '90%', left: '40%', size: 3, cls: 'star-slow', delay: '4.5s' },
-  { top: '50%', left: '95%', size: 2, cls: 'star-med',  delay: '1s' },
-  { top: '28%', left: '35%', size: 4, cls: 'star-fast', delay: '8s' },
-];
+    { top: '15%', left: '10%', size: 3, cls: 'star-slow', delay: '0s' },
+    { top: '8%', left: '45%', size: 2, cls: 'star-med', delay: '2s' },
+    { top: '25%', left: '80%', size: 4, cls: 'star-fast', delay: '1s' },
+    { top: '40%', left: '15%', size: 2, cls: 'star-med', delay: '4s' },
+    { top: '55%', left: '8%', size: 3, cls: 'star-slow', delay: '3s' },
+    { top: '35%', left: '60%', size: 2, cls: 'star-fast', delay: '5s' },
+    { top: '65%', left: '30%', size: 4, cls: 'star-slow', delay: '1.5s' },
+    { top: '80%', left: '15%', size: 2, cls: 'star-med', delay: '6s' },
+    { top: '75%', left: '85%', size: 3, cls: 'star-fast', delay: '0.5s' },
+    { top: '85%', left: '65%', size: 2, cls: 'star-med', delay: '3.5s' },
+    { top: '12%', left: '75%', size: 3, cls: 'star-slow', delay: '7s' },
+    { top: '45%', left: '88%', size: 2, cls: 'star-fast', delay: '2.5s' },
+    { top: '90%', left: '40%', size: 3, cls: 'star-slow', delay: '4.5s' },
+    { top: '50%', left: '95%', size: 2, cls: 'star-med', delay: '1s' },
+    { top: '28%', left: '35%', size: 4, cls: 'star-fast', delay: '8s' },
+  ];
 
 function AshokaChakra() {
   const spokes = Array.from({ length: 24 }, (_, i) => {
@@ -65,7 +65,7 @@ export default function Hero() {
           />
         ))}
       </div>
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060B1A]/40 to-[#0A1530] pointer-events-none" aria-hidden="true" />
 
@@ -121,11 +121,11 @@ export default function Hero() {
 
         <div className="mt-24 pt-12 border-t border-[rgba(201,168,76,0.1)]">
           <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-gold/60 mb-10 font-medium">
-            Systems Built For
+            We have worked with
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-60 hover:opacity-100 transition-opacity duration-500">
+          <div className="flex flex-nowrap justify-between items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-500 overflow-x-auto pb-4 sm:pb-0 hide-scrollbar">
             {[
-              { name: 'Swooo', bold: 'pos' },
+              { name: 'Swoo', bold: 'POS' },
               { name: 'Zuid', bold: 'Energies' },
               { name: 'Needy', bold: 'Loans' },
               { name: 'Airport', bold: 'EV' },
