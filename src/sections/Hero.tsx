@@ -83,7 +83,10 @@ export default function Hero() {
       </div>
       
       {/* Core Background Gradient Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060B1A]/40 to-[#0A1530]" pointer-events-none aria-hidden="true" />
+      <div 
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060B1A]/40 to-[#0A1530] pointer-events-none" 
+        aria-hidden="true" 
+      />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)]">
