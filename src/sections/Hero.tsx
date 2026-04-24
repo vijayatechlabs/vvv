@@ -4,7 +4,6 @@ const STARS: Array<{
   top: string; left: string; size: number;
   cls: string; delay: string;
 }> = [
-  // A mix of slow, medium, and fast growing stars scattered across the universe
   { top: '15%', left: '10%', size: 3, cls: 'star-slow', delay: '0s' },
   { top: '8%',  left: '45%', size: 2, cls: 'star-med',  delay: '2s' },
   { top: '25%', left: '80%', size: 4, cls: 'star-fast', delay: '1s' },
@@ -34,28 +33,15 @@ function AshokaChakra() {
   });
 
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="8" cy="8" r="7" stroke="#C9A84C" strokeWidth="0.75" fill="none" />
       <circle cx="8" cy="8" r="1.2" fill="#C9A84C" />
       {spokes.map(({ x1, y1, x2, y2, key }) => (
-        <line
-          key={key}
-          x1={x1} y1={y1} x2={x2} y2={y2}
-          stroke="#C9A84C"
-          strokeWidth="0.6"
-        />
+        <line key={key} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#C9A84C" strokeWidth="0.6" />
       ))}
     </svg>
   );
 }
-
 
 export default function Hero() {
   const scrollToCompanies = () => {
@@ -65,7 +51,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center universe-bg overflow-hidden">
-      {/* The Stars */}
+      {/* Background Stars */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {STARS.map((star, i) => (
           <span
@@ -82,12 +68,10 @@ export default function Hero() {
         ))}
       </div>
       
-      {/* Core Background Gradient Overlay to ensure text readability */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060B1A]/40 to-[#0A1530] pointer-events-none" 
-        aria-hidden="true" 
-      />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060B1A]/40 to-[#0A1530] pointer-events-none" aria-hidden="true" />
 
+      {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[rgba(201,168,76,0.3)] bg-[rgba(201,168,76,0.05)]">
           <span className="text-gold text-xs font-sans font-medium tracking-wider uppercase">
@@ -144,9 +128,11 @@ export default function Hero() {
         </button>
       </div>
 
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-0.5 h-8 bg-gradient-to-b from-gold/40 to-transparent mx-auto" />
       </div>
     </section>
   );
 }
+
