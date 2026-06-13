@@ -60,17 +60,11 @@ const logoMap: Record<string, LogoConfig> = {
     text: '#FECACA',
     font: 'sans',
   },
-  'Santa': {
-    initials: 'S',
-    bg: '#944C00',
-    text: '#FED7AA',
-    font: 'serif',
-  },
   'PANI': {
-    image: '/PANI-logo-square.jpg',
+    image: '/pani-icon.svg',
     initials: 'P',
-    bg: '#0A3D62',
-    text: '#7DD3FC',
+    bg: '#0a0e1a',
+    text: '#6d7cff',
     font: 'sans',
   },
   'Revive Talent': {
@@ -88,6 +82,25 @@ const logoMap: Record<string, LogoConfig> = {
     text: '#2DD4BF',
     font: 'serif',
     contain: true,
+  },
+  'SpinVerb': {
+    image: '/spinverb-favicon.svg',
+    initials: 'SV',
+    bg: '#0b1020',
+    text: '#4ade80',
+    font: 'sans',
+  },
+  'Glint': {
+    initials: 'GL',
+    bg: '#312E81',
+    text: '#C7D2FE',
+    font: 'sans',
+  },
+  'OpenStart': {
+    initials: 'OS',
+    bg: '#134E4A',
+    text: '#5EEAD4',
+    font: 'mono',
   },
 };
 

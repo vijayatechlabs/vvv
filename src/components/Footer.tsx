@@ -17,9 +17,17 @@ const brandsByGroup = [
     brands: [
       { name: 'Shrika Finserv', url: 'https://shrika.in' },
       { name: 'Shrika Realty', url: 'https://shrikarealty.in' },
-      { name: 'Santa', url: null },
-      { name: 'PANI', url: null },
+      { name: 'PANI', url: 'https://panihq.com' },
       { name: 'Revive Talent', url: 'https://revivetalent.com' },
+      { name: 'SpinVerb', url: 'https://spinverb.in' },
+    ],
+  },
+  {
+    label: 'Research & Open Source',
+    brands: [
+      { name: 'MemPalace', url: 'https://mempalace.in' },
+      { name: 'Glint', url: 'https://github.com/vijayatechlabs/glint' },
+      { name: 'OpenStart', url: 'https://github.com/vijayatechlabs/openstart' },
     ],
   },
 ];
@@ -30,7 +38,7 @@ export default function Footer() {
       {/* Background Effects */}
       <div className="absolute inset-0 universe-bg opacity-50" />
       <div className="absolute inset-0 premium-grain opacity-20" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
           <div className="lg:col-span-4 flex flex-col items-start">
@@ -60,7 +68,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-12">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {brandsByGroup.map((group) => (
               <div key={group.label} className="flex flex-col items-start">
                 <h4 className="font-sans text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8 text-left">
@@ -113,7 +121,7 @@ export default function Footer() {
                 </p>
                 <div className="h-px w-12 bg-current" />
               </div>
-              
+
               <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-[10px] uppercase tracking-[0.15em] text-muted/50 font-semibold">
                 <div className="px-3 py-1 rounded-full border border-gold/10 bg-gold/5">
                   CIN: U72900AP2021OPC118054
