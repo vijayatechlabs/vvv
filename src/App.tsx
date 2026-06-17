@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Hiring from './pages/Hiring';
+import JobDetail from './pages/JobDetail';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Refund from './pages/Refund';
@@ -22,6 +24,8 @@ function Layout() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/hiring" element={<Hiring />} />
+        <Route path="/hiring/:slug" element={<JobDetail />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund" element={<Refund />} />

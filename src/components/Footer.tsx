@@ -5,7 +5,7 @@ const brandsByGroup = [
   {
     label: 'AI & Technology',
     brands: [
-      { name: 'VijayaTech Labs', url: 'https://vijayatech.in' },
+      { name: 'VijayaTech Labs', url: 'https://vijayatechlabs.com' },
       { name: 'atharva AI', url: 'https://atharva.app' },
       { name: 'Zira', url: 'https://heyzira.com' },
       { name: 'naam', url: 'https://naam.one' },
