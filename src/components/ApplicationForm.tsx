@@ -27,7 +27,7 @@ interface ApplicationFormProps {
 }
 
 export default function ApplicationForm({ roleTitle }: ApplicationFormProps) {
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
+  const webhookUrl = import.meta.env.VITE_ZOHO_FLOW_WEBHOOK_URL as string | undefined;
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -44,33 +44,37 @@ export default function ApplicationForm({ roleTitle }: ApplicationFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!accessKey) {
-      console.error('Missing VITE_WEB3FORMS_ACCESS_KEY');
+    if (!webhookUrl) {
+      console.error('Missing VITE_ZOHO_FLOW_WEBHOOK_URL in environment variables');
       return;
     }
     setIsLoading(true);
 
-    const data = new FormData();
-    data.append('access_key', accessKey);
-    data.append('subject', `Job Application: ${roleTitle}`);
-    data.append('name', form.name);
-    data.append('email', form.email);
-    data.append('phone', form.phone);
-    data.append('linkedin', form.linkedin);
-    data.append('message', form.message);
-    data.append('role', roleTitle);
+    // URLSearchParams automatically sets Content-Type to application/x-www-form-urlencoded
+    // This is safe for CORS (no preflight) AND natively understood by Zoho Flow webhooks.
+    const payload = new URLSearchParams();
+    payload.append('name', form.name);
+    payload.append('email', form.email);
+    payload.append('phone', form.phone);
+    payload.append('linkedin', form.linkedin);
+    payload.append('message', form.message);
+    payload.append('role', roleTitle);
+    payload.append('source', 'Website');
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // mode: 'no-cors' prevents the browser from sending a preflight OPTIONS request
+      // URLSearchParams guarantees the webhook server receives standard form-encoded data
+      await fetch(webhookUrl, {
         method: 'POST',
-        body: data,
+        mode: 'no-cors',
+        body: payload,
       });
 
-      if (response.ok) {
-        setForm({ name: '', email: '', phone: '', linkedin: '', message: '' });
-        setShowToast(true);
-        setTimeout(() => setShowToast(false), 5000);
-      }
+      // Since we use no-cors, the response is opaque (we can't read response.ok),
+      // but if fetch didn't throw a network error, the POST was successfully sent.
+      setForm({ name: '', email: '', phone: '', linkedin: '', message: '' });
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 5000);
     } catch (error) {
       console.error('Application submission error:', error);
     } finally {
