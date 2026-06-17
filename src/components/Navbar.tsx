@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'About', href: '/#about' },
   { label: 'Portfolio', href: '/#companies' },
   { label: 'Research', href: '/#numbers' },
-  { label: 'Careers', href: '/#careers' },
+  { label: 'Careers', href: '/hiring' },
   { label: 'Contact', href: '/#contact' },
 ];
 
@@ -51,8 +51,11 @@ export default function Navbar() {
   };
 
   const isActive = (href: string) => {
+    if (href === '/hiring') {
+      return location.pathname.startsWith('/hiring');
+    }
     const id = href.replace('/#', '');
-    return activeSection === id;
+    return isHome && activeSection === id;
   };
 
   return (

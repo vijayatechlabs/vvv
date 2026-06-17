@@ -18,7 +18,7 @@ export const sectors: Sector[] = [
     companies: [
       {
         name: 'VijayaTech Labs',
-        domain: 'vijayatech.in',
+        domain: 'vijayatechlabs.com',
         tagline: 'AI & Automation Agency — Digital automation for your business',
         status: 'Live',
       },
