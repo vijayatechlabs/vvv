@@ -374,6 +374,37 @@ export const roles: Role[] = [
       compensation: 'Salary: Discussed at interview based on experience',
     },
   },
+  {
+    slug: 'uk-bpo-dialer-manager',
+    title: 'UK BPO Dialer Manager',
+    description:
+      'Manage dialer campaigns, optimize connect rates, and oversee lead data for UK BPO processes.',
+    fullDescription:
+      'We are looking for an experienced Dialer Manager to join our UK BPO operations. You will be responsible for managing outbound and inbound dialer systems, optimizing campaign pacing, and ensuring maximum connectivity.\n\nThis role requires strong analytical skills, hands-on experience with dialer platforms, and the ability to collaborate with Operations to drive campaign performance while maintaining compliance.',
+    responsibilities: [
+      'Manage daily operations of the dialer system, including campaign setup, pacing, and real-time monitoring',
+      'Upload, scrub, and segment lead lists to maximize contact rates and ensure data compliance',
+      'Monitor live campaign performance and adjust strategies alongside Operations and Team Leads',
+      'Generate daily, weekly, and monthly reports on key metrics (connect rates, drop rates, agent wait times)',
+      'Troubleshoot basic dialer issues and coordinate with technical support when needed',
+    ],
+    requirements: [
+      'Minimum 2+ years of experience managing dialer systems (e.g., Vicidial, Genesys, Five9) in a BPO environment',
+      'Strong understanding of outbound dialing metrics and compliance guidelines (e.g., GDPR for UK data)',
+      'Advanced Excel/Google Sheets skills for data management and reporting',
+      'Ability to make quick, data-driven decisions under pressure',
+      'Calm under pressure with a problem-solving mindset',
+    ],
+    type: 'Full-time',
+    applyMethod: 'form',
+    featured: true,
+    active: true,
+    details: {
+      shift: 'UK shift hours (timings shared at interview)',
+      extraRequirementKeys: ['ukShift'],
+      compensation: 'Salary: Discussed at interview based on experience',
+    },
+  },
 ];
 
 export function getActiveRoles(): Role[] {
