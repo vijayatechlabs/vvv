@@ -405,6 +405,35 @@ export const roles: Role[] = [
       compensation: 'Salary: Discussed at interview based on experience',
     },
   },
+  {
+    slug: 'junior-accountant',
+    title: 'Junior Accountant',
+    description:
+      'Manage day-to-day financial entries and transactions in Zoho Books for the entire ViswaVardhan Vyapara company, including UK BPO project investments and payroll.',
+    fullDescription:
+      'ViswaVardhan Vyapara is expanding rapidly with the UK BPO project and needs a detail-oriented Junior Accountant to manage all financial records from day one.\n\nYou will own the books in Zoho Books — entering every transaction, tracking capital investments (computers, laptops, chairs, and other inventory), handling salary records, and ensuring our existing company processes are reflected accurately in the accounts.\n\nThis is a full-time, on-site role at our Anantapuramu office. It is a junior position with clear scope to grow — salary revisions and broader responsibilities will follow as you demonstrate accuracy and ownership.',
+    responsibilities: [
+      'Enter and organise all daily financial transactions accurately in Zoho Books',
+      'Track capital investments for the UK BPO project — IT equipment, office furniture, and other inventory',
+      'Manage salary disbursement records and other staff-related financial entries',
+      'Categorise expenses and ensure alignment with ViswaVardhan Vyapara existing company processes',
+      'Assist in generating basic financial summaries and reports for management review',
+    ],
+    requirements: [
+      'Familiarity with Zoho Books is highly preferred',
+      'Basic understanding of accounting principles and double-entry bookkeeping',
+      'Prior experience in accounting or bookkeeping (0–2 years; freshers with relevant education welcome)',
+      "B.Com / M.Com / CA Inter or equivalent qualification preferred",
+      'Strong attention to detail and organisational skills',
+    ],
+    type: 'Full-time',
+    applyMethod: 'form',
+    featured: true,
+    active: true,
+    details: {
+      compensation: 'Salary: Discussed at interview based on experience',
+    },
+  },
 ];
 
 export function getActiveRoles(): Role[] {
