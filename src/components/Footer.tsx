@@ -19,7 +19,7 @@ const brandsByGroup = [
       { name: 'Shrika Realty', url: 'https://shrikarealty.in' },
       { name: 'PANI', url: 'https://panihq.com' },
       { name: 'Revive Talent', url: 'https://revivetalent.com' },
-      { name: 'SpinVerb', url: 'https://spinverb.in' },
+      { name: 'AgenticAds', url: 'https://agenticads.dev' },
     ],
   },
   {

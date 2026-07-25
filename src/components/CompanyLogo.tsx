@@ -83,8 +83,8 @@ const logoMap: Record<string, LogoConfig> = {
     font: 'serif',
     contain: true,
   },
-  'SpinVerb': {
-    image: '/spinverb-favicon.svg',
+  'AgenticAds': {
+    image: '/agenticads-favicon.svg',
     initials: 'SV',
     bg: '#0b1020',
     text: '#4ade80',

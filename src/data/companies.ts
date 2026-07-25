@@ -81,8 +81,8 @@ export const sectors: Sector[] = [
         status: 'Live',
       },
       {
-        name: 'SpinVerb',
-        domain: 'spinverb.in',
+        name: 'AgenticAds',
+        domain: 'agenticads.dev',
         tagline: 'Ad marketplace inside AI coding-agent wait states — built for India, UPI payouts.',
         status: 'Early Access',
       },
