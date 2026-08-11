@@ -30,4 +30,5 @@ candidates.csv
 !.ai/docs/
 .cursor/
 .grok/
+.freebuff/
 .mcp.json
