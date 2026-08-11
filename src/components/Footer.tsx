@@ -10,6 +10,7 @@ const brandsByGroup = [
       { name: 'Zira', url: 'https://heyzira.com' },
       { name: 'naam', url: 'https://naam.one' },
       { name: 'WP Setu', url: 'https://wpsetu.com' },
+      { name: 'KlypsoTech', url: 'https://klypsotech.com' },
     ],
   },
   {
@@ -19,15 +20,16 @@ const brandsByGroup = [
       { name: 'Shrika Realty', url: 'https://shrikarealty.in' },
       { name: 'PANI', url: 'https://panihq.com' },
       { name: 'Revive Talent', url: 'https://revivetalent.com' },
-      { name: 'SpinVerb', url: 'https://spinverb.in' },
+      { name: 'AgenticAds', url: 'https://agenticads.dev' },
     ],
   },
   {
     label: 'Research & Open Source',
     brands: [
       { name: 'MemPalace', url: 'https://mempalace.in' },
-      { name: 'Glint', url: 'https://github.com/vijayatechlabs/glint' },
+      { name: 'Glint', url: 'https://vijayatechlabs.com/glint' },
       { name: 'OpenStart', url: 'https://github.com/vijayatechlabs/openstart' },
+      { name: 'osaa.ai', url: 'https://osaa.ai' },
     ],
   },
 ];

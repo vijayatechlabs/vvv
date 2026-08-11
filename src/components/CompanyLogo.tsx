@@ -83,12 +83,20 @@ const logoMap: Record<string, LogoConfig> = {
     font: 'serif',
     contain: true,
   },
-  'SpinVerb': {
-    image: '/spinverb-favicon.svg',
-    initials: 'SV',
+  'AgenticAds': {
+    image: '/agenticads-favicon.svg',
+    initials: 'AA',
     bg: '#0b1020',
     text: '#4ade80',
     font: 'sans',
+  },
+  'KlypsoTech': {
+    image: '/klypsotech-logo.svg',
+    initials: 'KT',
+    bg: '#ffffff',
+    text: '#0072FF',
+    font: 'sans',
+    contain: true,
   },
   'Glint': {
     initials: 'GL',
@@ -100,6 +108,12 @@ const logoMap: Record<string, LogoConfig> = {
     initials: 'OS',
     bg: '#134E4A',
     text: '#5EEAD4',
+    font: 'mono',
+  },
+  'osaa.ai': {
+    initials: 'OA',
+    bg: '#1E1B4B',
+    text: '#A5B4FC',
     font: 'mono',
   },
 };
