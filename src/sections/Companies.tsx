@@ -157,28 +157,25 @@ export default function Companies() {
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-[rgba(201,168,76,0.1)] space-y-3">
-                      <div className="flex items-center justify-between gap-2">
-                        <StatusBadge status={company.status} />
-                        {company.status !== 'Coming Soon' ? (
-                          <a
-                            href={
-                              company.domain.startsWith('http')
-                                ? company.domain
-                                : `https://${company.domain}`
-                            }
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="visit-link font-sans text-xs text-gold hover:text-gold-light flex-shrink-0"
-                          >
-                            Visit
-                            <ExternalLink size={11} />
-                          </a>
-                        ) : null}
-                      </div>
-
+                    <div className="flex items-center justify-between gap-2 pt-4 border-t border-[rgba(201,168,76,0.1)]">
+                      <StatusBadge status={company.status} />
                       {company.socials ? (
                         <SocialLinks companyName={company.name} socials={company.socials} />
+                      ) : null}
+                      {company.status !== 'Coming Soon' ? (
+                        <a
+                          href={
+                            company.domain.startsWith('http')
+                              ? company.domain
+                              : `https://${company.domain}`
+                          }
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="visit-link font-sans text-xs text-gold hover:text-gold-light flex-shrink-0 ml-auto sm:ml-0"
+                        >
+                          Visit
+                          <ExternalLink size={11} />
+                        </a>
                       ) : null}
                     </div>
                   </article>
