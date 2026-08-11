@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Facet Gradients matching KlypsoTech logo -->
+    <linearGradient id="topLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C4FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+    <linearGradient id="bottomLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0072FF"/>
+      <stop offset="100%" stop-color="#0047FF"/>
+    </linearGradient>
+    <linearGradient id="topRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0088FF"/>
+      <stop offset="100%" stop-color="#003ACC"/>
+    </linearGradient>
+    <linearGradient id="bottomRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0047FF"/>
+      <stop offset="100%" stop-color="#0A2080"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clean Background Badge -->
+  <rect width="200" height="200" rx="32" fill="#FFFFFF"/>
+
+  <!-- Centered KlypsoTech Hexagon Geometric Logo -->
+  <g transform="translate(100, 100) scale(1.35)">
+    <!-- Top-Left Facet -->
+    <path d="M -52,0 L -26,-45 L 0,-45 L 0,-15 L -15,0 Z" fill="url(#topLeftGrad)"/>
+    
+    <!-- Bottom-Left Facet -->
+    <path d="M -52,0 L -26,45 L 0,45 L 0,15 L -15,0 Z" fill="url(#bottomLeftGrad)"/>
+    
+    <!-- Top-Right Facet -->
+    <path d="M 52,0 L 26,-45 L 0,-45 L 0,-15 L 15,0 Z" fill="url(#topRightGrad)"/>
+    
+    <!-- Bottom-Right Facet -->
+    <path d="M 52,0 L 26,45 L 0,45 L 0,15 L 15,0 Z" fill="url(#bottomRightGrad)"/>
+  </g>
+</svg>

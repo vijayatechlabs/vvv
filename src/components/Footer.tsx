@@ -10,6 +10,7 @@ const brandsByGroup = [
       { name: 'Zira', url: 'https://heyzira.com' },
       { name: 'naam', url: 'https://naam.one' },
       { name: 'WP Setu', url: 'https://wpsetu.com' },
+      { name: 'KlypsoTech', url: 'https://klypsotech.com' },
     ],
   },
   {
@@ -26,8 +27,9 @@ const brandsByGroup = [
     label: 'Research & Open Source',
     brands: [
       { name: 'MemPalace', url: 'https://mempalace.in' },
-      { name: 'Glint', url: 'https://github.com/vijayatechlabs/glint' },
+      { name: 'Glint', url: 'https://vijayatechlabs.com/glint' },
       { name: 'OpenStart', url: 'https://github.com/vijayatechlabs/openstart' },
+      { name: 'osaa.ai', url: 'https://osaa.ai' },
     ],
   },
 ];

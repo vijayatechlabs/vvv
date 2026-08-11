@@ -21,3 +21,13 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Candidate PII — never commit
+candidates.csv
+
+# Local AI / editor tooling
+.ai/
+!.ai/docs/
+.cursor/
+.grok/
+.mcp.json
