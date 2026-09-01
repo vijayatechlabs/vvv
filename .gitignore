@@ -26,9 +26,10 @@ dist-ssr
 candidates.csv
 
 # Local AI / editor tooling
-.ai/
+.ai/*
 !.ai/docs/
 .cursor/
 .grok/
 .freebuff/
 .mcp.json
+mcp.json

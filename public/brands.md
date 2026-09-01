@@ -1,12 +1,14 @@
 # ViswaVardhan Vyapara — Portfolio Brands & Directory
 
-> **Notice**: This document serves as the authoritative, persistent reference directory for all 17 operating brands under ViswaVardhan Vyapara (OPC) Private Limited. It is intended for both human team members and AI agents.
+> **Notice**: This document serves as the authoritative, persistent reference directory for all 17 operating brands under ViswaVardhan Vyapara (OPC) Private Limited. It is publicly available at `viswavardhan.in/brands.md` for both human team members and AI agents.
 
 ---
 
 ## Portfolio Overview Statistics
 - **Parent Entity**: ViswaVardhan Vyapara (OPC) Private Limited
 - **Headquarters**: Ananthapuramu, Andhra Pradesh, India
+- **Website**: https://viswavardhan.in
+- **Public Markdown Directory**: https://viswavardhan.in/brands.md
 - **Total Active Brands**: 17
 - **Sectors**: 4 (`AI & Technology`, `Fintech & Real Estate`, `Commerce & Growth`, `Research & Open Source`)
 - **Global Clients Served**: 540+
@@ -217,4 +219,4 @@ All portfolio brand cards and documentation follow a strict standardized sequenc
 ---
 
 ## Machine-Readable Data Reference (`companies.ts`)
-The authoritative source code definitions are maintained in [src/data/companies.ts](file:///Users/User/Projects/vvv/src/data/companies.ts).
+The authoritative source code definitions are maintained in `src/data/companies.ts`.

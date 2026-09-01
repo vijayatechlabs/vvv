@@ -7,7 +7,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { numeric: 15,   suffix: '',   label: 'Portfolio Companies' },
+  { numeric: 17,   suffix: '',   label: 'Portfolio Companies' },
   { numeric: 14,   suffix: '+',  label: 'Years Experience' },
   { numeric: 540,  suffix: '+',  label: 'Global Clients' },
   { numeric: 2021, suffix: '',   label: 'Year Founded' },

@@ -21,6 +21,8 @@ const brandsByGroup = [
       { name: 'PANI', url: 'https://panihq.com' },
       { name: 'Revive Talent', url: 'https://revivetalent.com' },
       { name: 'AgenticAds', url: 'https://agenticads.dev' },
+      { name: 'OutBid.fit', url: 'https://outbid.fit' },
+      { name: 'Outbid Host', url: 'https://outbid.host' },
     ],
   },
   {

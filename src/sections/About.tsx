@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 
 const stats = [
-  { value: '15', label: 'Brands & Counting' },
+  { value: '17', label: 'Brands & Counting' },
   { value: '14+', label: 'Years of IT Expertise' },
   { value: '540+', label: 'Global Clients Served' },
 ];
@@ -65,7 +65,7 @@ export default function About() {
               A company builder rooted in India.
             </h2>
             <p className="font-sans text-base text-muted leading-[1.8] mb-8">
-              ViswaVardhan Vyapara (OPC) Private Limited is a DPIIT StartUp India recognised company. Founded in 2021 and headquartered in Ananthapuramu, Andhra Pradesh, we build and incubate companies that solve real-world problems across AI & Automation, Financial Services, Real Estate, and Commerce. We operate as a parent company to 15 brands — each independently serving its market.
+              ViswaVardhan Vyapara (OPC) Private Limited is a DPIIT StartUp India recognised company. Founded in 2021 and headquartered in Ananthapuramu, Andhra Pradesh, we build and incubate companies that solve real-world problems across AI & Automation, Financial Services, Real Estate, and Commerce. We operate as a parent company to 17 brands — each independently serving its market.
             </p>
 
             <button
