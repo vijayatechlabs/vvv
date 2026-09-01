@@ -106,7 +106,7 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-[11px] tracking-[0.1em] text-cream/40 font-sans uppercase">
-            <span>15 active brands across 4 sectors</span>
+            <span>17 active brands across 4 sectors</span>
             <span className="hidden sm:block w-1 h-1 rounded-full bg-gold/20" />
             <span>DPIIT Recognised Venture Studio</span>
             <span className="hidden sm:block w-1 h-1 rounded-full bg-gold/20" />

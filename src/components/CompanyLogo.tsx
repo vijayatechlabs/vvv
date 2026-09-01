@@ -90,6 +90,22 @@ const logoMap: Record<string, LogoConfig> = {
     text: '#4ade80',
     font: 'sans',
   },
+  'OutBid.fit': {
+    image: '/outbid-fit-icon.svg',
+    initials: 'OF',
+    bg: '#0d0e10',
+    text: '#c6ff4d',
+    font: 'sans',
+    contain: true,
+  },
+  'Outbid Host': {
+    image: '/outbid-host-icon.svg',
+    initials: 'OH',
+    bg: '#0a0a0a',
+    text: '#00e5a0',
+    font: 'sans',
+    contain: true,
+  },
   'KlypsoTech': {
     image: '/klypsotech-logo.svg',
     initials: 'KT',

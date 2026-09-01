@@ -141,6 +141,18 @@ export const sectors: Sector[] = [
           x: 'https://x.com/AgenticAdsDev',
         },
       },
+      {
+        name: 'OutBid.fit',
+        domain: 'outbid.fit',
+        tagline: 'The crowd board for fitness apps — list free with a tweet, ranked by likes',
+        status: 'Live',
+      },
+      {
+        name: 'Outbid Host',
+        domain: 'outbid.host',
+        tagline: 'Pay-to-rank leaderboard for web hosting companies — outbid competitors to rank #1',
+        status: 'Live',
+      },
     ],
   },
   {
