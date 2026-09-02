@@ -29,7 +29,7 @@ const sections = [
   {
     title: '6. Contact Details',
     content:
-      'For any queries related to these Terms and Conditions, please contact us at:\n\nEmail: viswanatha@viswavardhan.in\nPhone: +91 95155 81989\nAddress: #28, MIES Villas, NH-44, Ananthapuramu – 515002, Andhra Pradesh, India',
+      'For any queries related to these Terms and Conditions, please contact us at:\n\nEmail: viswanatha@viswavardhan.in\nPhone: +91 94900 94806\nAddress: #28, MIES Villas, NH-44, Ananthapuramu – 515002, Andhra Pradesh, India',
   },
 ];
 
