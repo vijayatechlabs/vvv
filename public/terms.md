@@ -24,5 +24,5 @@ You agree to defend, indemnify and hold harmless ViswaVardhan Vyapara (OPC) Priv
 ## 6. Contact Details
 For any queries related to these Terms and Conditions, please contact us at:
 - **Email**: `viswanatha@viswavardhan.in`
-- **Phone**: `+91 94900 94806`
+- **Phone**: `+91 96528 41989`
 - **Address**: #28, MIES Villas, NH-44, Ananthapuramu – 515002, Andhra Pradesh, India

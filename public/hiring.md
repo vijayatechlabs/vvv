@@ -3,7 +3,7 @@
 > **Entity**: ViswaVardhan Vyapara (OPC) Private Limited  
 > **Location**: Ananthapuramu, Andhra Pradesh, India (On-site)  
 > **Canonical Web URL**: https://viswavardhan.in/hiring  
-> **Contact Phone**: [`+91 94900 94806`](tel:+919490094806) | **Email**: [`viswanatha@viswavardhan.in`](mailto:viswanatha@viswavardhan.in)
+> **Contact Phone**: [`+91 96528 41989`](tel:+919652841989) | **Email**: [`viswanatha@viswavardhan.in`](mailto:viswanatha@viswavardhan.in)
 
 ---
 
@@ -59,5 +59,5 @@ ViswaVardhan Vyapara is actively hiring across technology, AI automation, BPO op
 
 ## How to Apply
 - **Online Application Form**: https://viswavardhan.in/hiring
-- **Direct Candidate Inquiries**: Call `+91 94900 94806` or email `viswanatha@viswavardhan.in`
+- **Direct Candidate Inquiries**: Call `+91 96528 41989` or email `viswanatha@viswavardhan.in`
 - **Office Address**: #28, MIES Villas, NH-44, beside Exotikka & Ulavacharu, Ananthapuramu – 515002, Andhra Pradesh, India

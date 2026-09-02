@@ -24,7 +24,7 @@ const sections = [
   {
     title: '5. Contact',
     content:
-      'For any questions or to submit a refund request, please contact us at:\n\nEmail: viswanatha@viswavardhan.in\nPhone: +91 94900 94806',
+      'For any questions or to submit a refund request, please contact us at:\n\nEmail: viswanatha@viswavardhan.in\nPhone: +91 96528 41989',
   },
 ];
 

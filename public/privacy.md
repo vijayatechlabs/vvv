@@ -33,5 +33,5 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 ## 9. Contact Us
 If you have any questions about this Privacy Policy, please contact us at:
 - **Email**: `viswanatha@viswavardhan.in`
-- **Phone**: `+91 94900 94806`
+- **Phone**: `+91 96528 41989`
 - **Address**: #28, MIES Villas, NH-44, Ananthapuramu – 515002, Andhra Pradesh, India
