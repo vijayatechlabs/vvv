@@ -2,5 +2,10 @@
 
 > ViswaVardhan Vyapara (OPC) Private Limited is a DPIIT StartUp India recognized company (DIPP210560). Headquartered in Ananthapuramu, Andhra Pradesh, India, we architect, launch, and scale category-defining operating brands across AI & Technology, Fintech & Real Estate, Commerce & Growth, and Research & Open Source.
 
-## Portfolio & Directory
+## Machine-Readable Markdown Mirrors (Twin Files)
+- [Contact & Corporate Communications](https://viswavardhan.in/contact.md): Official contact channels (Phone: +91 94900 94806), office address, registration numbers (CIN, DPIIT, GSTIN), and inquiry guidance.
 - [Portfolio Brands Directory](https://viswavardhan.in/brands.md): Authoritative markdown directory of all 17 operating brands with domains, descriptions, sector groupings, and verified links.
+- [Careers & Hiring](https://viswavardhan.in/hiring.md): Current open roles across Tech, UK BPO Operations, Marketing, and Accounting with application guidelines.
+- [Privacy Policy](https://viswavardhan.in/privacy.md): Official privacy and data protection terms.
+- [Terms and Conditions](https://viswavardhan.in/terms.md): Terms of service and usage for company digital properties.
+- [Cancellations & Refund Policy](https://viswavardhan.in/refund.md): Cancellation, refund, and billing policies.
